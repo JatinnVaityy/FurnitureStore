@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { FaSearch, FaUser, FaShoppingCart } from 'react-icons/fa';
+import { FaSearch, FaUser, FaShoppingCart, FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import './Navbar.css';
 
 const Navbar = () => {
   const [searchVisible, setSearchVisible] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
   const toggleSearch = () => {
     setSearchVisible(prev => !prev);
@@ -12,6 +13,14 @@ const Navbar = () => {
   const handleSearch = () => {
     // Add your search logic here
     console.log('Search triggered');
+  };
+
+  const toggleDropdown = (category) => {
+    setActiveDropdown(activeDropdown === category ? null : category);
+  };
+
+  const closeDropdown = () => {
+    setActiveDropdown(null);
   };
 
   return (
@@ -38,30 +47,46 @@ const Navbar = () => {
       </header>
       <nav className="navbar">
         <ul className="navbar-nav">
-          <li className="nav-item">Living Room
-            <ul className="dropdown-menu">
-              <li className="dropdown-item">Sofa</li>
-              <li className="dropdown-item">Coffee Table</li>
-              <li className="dropdown-item">Shoe Rack</li>
+          <li className="nav-item" onMouseLeave={closeDropdown}>
+            <span className="nav-link" onClick={() => toggleDropdown('livingRoom')}>
+              Living Room
+              {activeDropdown === 'livingRoom' ? <FaAngleUp className="dropdown-icon" /> : <FaAngleDown className="dropdown-icon" />}
+            </span>
+            <ul className={`dropdown-menu ${activeDropdown === 'livingRoom' ? 'open' : ''}`}>
+              <li className="dropdown-item" onClick={closeDropdown}>Sofa</li>
+              <li className="dropdown-item" onClick={closeDropdown}>Coffee Table</li>
+              <li className="dropdown-item" onClick={closeDropdown}>Shoe Rack</li>
             </ul>
           </li>
-          <li className="nav-item">Bedroom
-            <ul className="dropdown-menu">
-              <li className="dropdown-item">Bed</li>
-              <li className="dropdown-item">Side Table</li>
-              <li className="dropdown-item">Dressing Table</li>
+          <li className="nav-item" onMouseLeave={closeDropdown}>
+            <span className="nav-link" onClick={() => toggleDropdown('bedroom')}>
+              Bedroom
+              {activeDropdown === 'bedroom' ? <FaAngleUp className="dropdown-icon" /> : <FaAngleDown className="dropdown-icon" />}
+            </span>
+            <ul className={`dropdown-menu ${activeDropdown === 'bedroom' ? 'open' : ''}`}>
+              <li className="dropdown-item" onClick={closeDropdown}>Bed</li>
+              <li className="dropdown-item" onClick={closeDropdown}>Side Table</li>
+              <li className="dropdown-item" onClick={closeDropdown}>Dressing Table</li>
             </ul>
           </li>
-          <li className="nav-item">Kitchen
-            <ul className="dropdown-menu">
-              <li className="dropdown-item">Cupboards</li>
-              <li className="dropdown-item">Wall Shelves</li>
+          <li className="nav-item" onMouseLeave={closeDropdown}>
+            <span className="nav-link" onClick={() => toggleDropdown('kitchen')}>
+              Kitchen
+              {activeDropdown === 'kitchen' ? <FaAngleUp className="dropdown-icon" /> : <FaAngleDown className="dropdown-icon" />}
+            </span>
+            <ul className={`dropdown-menu ${activeDropdown === 'kitchen' ? 'open' : ''}`}>
+              <li className="dropdown-item" onClick={closeDropdown}>Cupboards</li>
+              <li className="dropdown-item" onClick={closeDropdown}>Wall Shelves</li>
             </ul>
           </li>
-          <li className="nav-item">Seating
-            <ul className="dropdown-menu">
-              <li className="dropdown-item">Chairs</li>
-              <li className="dropdown-item">Stools</li>
+          <li className="nav-item" onMouseLeave={closeDropdown}>
+            <span className="nav-link" onClick={() => toggleDropdown('seating')}>
+              Seating
+              {activeDropdown === 'seating' ? <FaAngleUp className="dropdown-icon" /> : <FaAngleDown className="dropdown-icon" />}
+            </span>
+            <ul className={`dropdown-menu ${activeDropdown === 'seating' ? 'open' : ''}`}>
+              <li className="dropdown-item" onClick={closeDropdown}>Chairs</li>
+              <li className="dropdown-item" onClick={closeDropdown}>Stools</li>
             </ul>
           </li>
         </ul>
