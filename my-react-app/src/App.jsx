@@ -1,18 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
- 
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Footer from './Footer';
+import ContactUs from './ContactUs';
+import FAQ from './FAQ';
+import PrivacyPolicy from './PrivacyPolicy';
+import '@fortawesome/fontawesome-free/css/all.css';
+import Navbar from './NavBar/Navbar.jsx';
+import './NavBar/Navbar.css'
+const App = () => {
   return (
-    <>
-     <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    </>
-  )
+    <Router>
+      <div>
+       
+        <Navbar />
+        <Routes>
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;

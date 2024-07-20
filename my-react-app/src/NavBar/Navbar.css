@@ -1,0 +1,153 @@
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e7e7e7;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 1rem; /* Space between the search icon and other content */
+}
+
+.search-icon {
+    cursor: pointer;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -50%; /* Adjust this value to move the search bar higher up */
+    left: calc(100% + 0.5rem); /* Moves the search bar slightly to the right of the search icon */
+    transform: translateX(0); /* Ensure no additional shift */
+    margin-top: 0.5rem; /* Space between the icon and search bar */
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.search-input {
+    padding: 0.5rem;
+    border: 1px solid #e7e7e7;
+    border-radius: 0.25rem;
+    outline: none;
+    transition: width 0.3s ease;
+    width: 200px; /* Adjust width as needed */
+}
+
+.search-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #e7e7e7;
+    border-radius: 0.25rem;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+.title-container {
+    flex: 1;
+    text-align: center;
+}
+
+.title-container h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.icons-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: #007bff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the navbar-nav */
+    background-color: #ffffff;
+    padding: 1rem;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Center the nav items */
+}
+
+.nav-item {
+    position: relative;
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #e7e7e7;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    cursor: pointer;
+    list-style-type: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    color: #007bff; /* Blue color on hover */
+  text-decoration: underline; /* Underline on hover */
+}

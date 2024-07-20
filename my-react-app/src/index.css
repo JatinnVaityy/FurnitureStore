@@ -1,3 +1,126 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+/* index.css */
+
+.footer {
+  background-color: rgb(22, 22, 22); /* Pure black background */
+  color: #fff; /* White text color */
+  padding: 40px 20px; /* Increased vertical padding */
+  width: 100%; /* Full width */
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1 1 300px;
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  margin-bottom: 30px; /* Increased spacing between sections */
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  position: relative; /* Position relative for absolute positioning of hover effect */
+  display: inline-block; /* Ensure hover effect respects text boundaries */
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 20px; /* Added spacing between list items */
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin-right: 20px; /* Increased spacing between icons */
+  color: #fff; /* White icon color */
+  font-size: 24px;
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.social-icons a:hover {
+  color: #007bff; /* Hover color */
+}
+
+.social-icons a:last-child {
+  margin-right: 0; /* Remove margin from last icon */
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column; /* Display links vertically */
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #fff; /* White text color */
+  text-decoration: none;
+  font-size: 14px;
+  position: relative; /* Position relative for absolute positioning of hover effect */
+  margin-bottom: 20px; /* Adjust spacing between links */
+  padding: 10px 20px; /* Padding around each link */
+  display: inline-block;
+}
+
+/* Hover effect on links */
+.footer-links a:hover {
+  color: #007bff; /* Blue color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+.active-link {
+  font-weight: bold; /* Example of styling for active links */
+  color: #fff; /* White active link color */
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack columns vertically on smaller screens */
+    align-items: center; /* Center align columns */
+  }
+
+  .footer-column {
+    width: 100%; /* Full width for each column on smaller screens */
+    margin-bottom: 30px; /* Increased spacing between columns */
+  }
+
+  .social-icons {
+    text-align: center; /* Center align social icons */
+    margin-bottom: 20px; /* Add margin bottom for spacing */
+  }
+
+  .social-icons a {
+    margin-right: 15px; /* Decrease spacing between social icons */
+  }
+
+  .footer-links a {
+    text-align: center; /* Center align footer links */
+  }
+}
+a{
+  color: white;
+  text-decoration: none;
+  
+}
+a:hover {
+  color: #007bff; /* Blue color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+a {
+  color: #fff; /* White text color */
+  text-decoration: none; /* Remove underline by default */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
