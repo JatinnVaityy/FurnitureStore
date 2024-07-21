@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Footer from './Footer';
-import ContactUs from './ContactUs';
-import FAQ from './FAQ';
-import PrivacyPolicy from './PrivacyPolicy';
+import Footer from './Footer/Footer.jsx';
+import ContactUs from './Footer/ContactUs';
+import FAQ from './Footer/FAQ.jsx';
+import PrivacyPolicy from './Footer/PrivacyPolicy.jsx';
 import '@fortawesome/fontawesome-free/css/all.css';
 import Navbar from './NavBar/Navbar.jsx';
 import './NavBar/Navbar.css'

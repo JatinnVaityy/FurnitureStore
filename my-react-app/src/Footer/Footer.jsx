@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.css';
+import './Footer.css';
 
 const Footer = () => {
   return (
