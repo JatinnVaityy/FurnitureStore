@@ -7,11 +7,11 @@ import PrivacyPolicy from './PrivacyPolicy';
 import '@fortawesome/fontawesome-free/css/all.css';
 import Navbar from './NavBar/Navbar.jsx';
 import './NavBar/Navbar.css'
-import Home from './Home';
-import Newarrivals from './Newarrivals';
-import Bestseller from './Bestseller';
-import ImageRow from './ImageRow';
-import CenteredText from './CenteredText';
+import Home from './component/Home';
+import Newarrivals from './component/Newarrivals';
+import Bestseller from './component/Bestseller';
+import ImageRow from './component/ImageRow';
+import CenteredText from './component/CenteredText';
 const App = () => {
   return (
     <Router>
