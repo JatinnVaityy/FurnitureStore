@@ -1,0 +1,22 @@
+.centered-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15vh; /* Full viewport height */
+    text-align: center;
+    background-color: white; /* Optional: set a background color */
+    padding: 20px; /* Optional: add some padding */
+  }
+  
+  .centered-text-container h1 {
+    margin: 10px 0;
+    font-size: 36px; /* Adjust font size as needed */
+  }
+  
+  .centered-text-container p {
+    margin: 10px 0;
+    font-size: 18px; /* Adjust font size as needed */
+    max-width: 600px; /* Optional: limit the width of the paragraph for better readability */
+  }
+  

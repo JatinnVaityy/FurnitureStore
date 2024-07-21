@@ -1,0 +1,27 @@
+.background {
+    background-image: url('/sofa.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .shop-now-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: transparent; /* Make the button background transparent */
+    border: 2px solid white; /* Add a white border to make it visible */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top:99px; /* Move the button downward */
+  }
+  
+  .shop-now-btn:hover {
+    background-color: rgba(255, 69, 0, 0.5); /* Add a semi-transparent hover effect */
+    color: black; /* Change text color on hover for better visibility */
+  }
+  
