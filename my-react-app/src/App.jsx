@@ -47,8 +47,9 @@ const App = () => {
           <Home />
           <CenteredText />
           <Newarrivals />
+          
+          <Bestseller />\
           <ImageRow />
-          <Bestseller />
         </div>
         <Footer />
       </div>
