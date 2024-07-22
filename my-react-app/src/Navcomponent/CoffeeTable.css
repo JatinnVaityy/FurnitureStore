@@ -1,0 +1,34 @@
+.coffeeTable-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+    padding: 20px;
+}
+
+.coffeeTable-item {
+    border: 2px solid white;
+    margin: 10px;
+    padding: 10px;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+    background-color: white;
+    text-align: center;
+}
+
+.coffeeTable-image {
+    width: 100%;
+    height: auto;
+}
+
+.coffeeTable-details {
+    margin-top: 10px;
+}
+
+.coffeeTable-details h3 {
+    margin: 10px 0 5px 0;
+}
+
+.coffeeTable-details p {
+    margin: 0;
+}

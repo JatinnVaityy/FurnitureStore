@@ -1,0 +1,34 @@
+.shoerack-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+    padding: 20px;
+}
+
+.shoerack-item {
+    border: 2px solid white;
+    margin: 10px;
+    padding: 10px;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+    background-color: white;
+    text-align: center;
+}
+
+.shoerack-image {
+    width: 100%;
+    height: auto;
+}
+
+.shoerack-details {
+    margin-top: 10px;
+}
+
+.shoerack-details h3 {
+    margin: 10px 0 5px 0;
+}
+
+.shoerack-details p {
+    margin: 0;
+}

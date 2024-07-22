@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaSearch, FaUser, FaShoppingCart, FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import './Navbar.css';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [searchVisible, setSearchVisible] = useState(false);
@@ -53,9 +54,9 @@ const Navbar = () => {
               {activeDropdown === 'livingRoom' ? <FaAngleUp className="dropdown-icon" /> : <FaAngleDown className="dropdown-icon" />}
             </span>
             <ul className={`dropdown-menu ${activeDropdown === 'livingRoom' ? 'open' : ''}`}>
-              <li className="dropdown-item" onClick={closeDropdown}>Sofa</li>
-              <li className="dropdown-item" onClick={closeDropdown}>Coffee Table</li>
-              <li className="dropdown-item" onClick={closeDropdown}>Shoe Rack</li>
+              <li className="dropdown-item" onClick={closeDropdown}> <NavLink to="/sofa" activeClassName="active-link">Sofa</NavLink></li>
+              <li className="dropdown-item" onClick={closeDropdown}> <NavLink to="/CoffeeTable" activeClassName="active-link">Coffee Table</NavLink></li>
+              <li className="dropdown-item" onClick={closeDropdown}> <NavLink to="/Shoerack" activeClassName="active-link">Shoe Rack</NavLink></li>
             </ul>
           </li>
           <li className="nav-item" onMouseLeave={closeDropdown}>
@@ -64,9 +65,9 @@ const Navbar = () => {
               {activeDropdown === 'bedroom' ? <FaAngleUp className="dropdown-icon" /> : <FaAngleDown className="dropdown-icon" />}
             </span>
             <ul className={`dropdown-menu ${activeDropdown === 'bedroom' ? 'open' : ''}`}>
-              <li className="dropdown-item" onClick={closeDropdown}>Bed</li>
-              <li className="dropdown-item" onClick={closeDropdown}>Side Table</li>
-              <li className="dropdown-item" onClick={closeDropdown}>Dressing Table</li>
+              <li className="dropdown-item" onClick={closeDropdown}> <NavLink to="/Bed" activeClassName="active-link">Bed</NavLink></li>
+              <li className="dropdown-item" onClick={closeDropdown}> <NavLink to="/SideTable" activeClassName="active-link">Side Table</NavLink></li>
+              <li className="dropdown-item" onClick={closeDropdown}> <NavLink to="/Dressingtable" activeClassName="active-link">Dressing Table</NavLink></li>
             </ul>
           </li>
           <li className="nav-item" onMouseLeave={closeDropdown}>
@@ -75,8 +76,8 @@ const Navbar = () => {
               {activeDropdown === 'kitchen' ? <FaAngleUp className="dropdown-icon" /> : <FaAngleDown className="dropdown-icon" />}
             </span>
             <ul className={`dropdown-menu ${activeDropdown === 'kitchen' ? 'open' : ''}`}>
-              <li className="dropdown-item" onClick={closeDropdown}>Cupboards</li>
-              <li className="dropdown-item" onClick={closeDropdown}>Wall Shelves</li>
+              <li className="dropdown-item" onClick={closeDropdown}> <NavLink to="/Cupboard" activeClassName="active-link">Cupboards </NavLink> </li>
+              <li className="dropdown-item" onClick={closeDropdown}> <NavLink to="/Wallshelves" activeClassName="active-link">Wall Shelves</NavLink></li>
             </ul>
           </li>
           <li className="nav-item" onMouseLeave={closeDropdown}>
@@ -85,8 +86,8 @@ const Navbar = () => {
               {activeDropdown === 'seating' ? <FaAngleUp className="dropdown-icon" /> : <FaAngleDown className="dropdown-icon" />}
             </span>
             <ul className={`dropdown-menu ${activeDropdown === 'seating' ? 'open' : ''}`}>
-              <li className="dropdown-item" onClick={closeDropdown}>Chairs</li>
-              <li className="dropdown-item" onClick={closeDropdown}>Stools</li>
+              <li className="dropdown-item" onClick={closeDropdown}> <NavLink to="/Chair" activeClassName="active-link">Chairs</NavLink></li>
+              <li className="dropdown-item" onClick={closeDropdown}> <NavLink to="/Stools" activeClassName="active-link">Stools</NavLink></li>
             </ul>
           </li>
         </ul>
