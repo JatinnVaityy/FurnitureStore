@@ -24,7 +24,7 @@ const DressingTable = () => {
         <div className="dressingtable-container">
             {dressingTables.map((dressingTable, index) => (
                 <div key={index} className="dressingtable-item">
-                    <img src={dressingTable.imgSrc} alt={dressingTable.name} className="dressingtable-image" />
+                    <img src={dressingTable.imgSrc} alt={dressingTable.name} class="dressingtable-image" />
                     <div className="dressingtable-details">
                         <h3>{dressingTable.name}</h3>
                         <p>{dressingTable.price}</p>

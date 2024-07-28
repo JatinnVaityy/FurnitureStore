@@ -24,7 +24,7 @@ const Chair = () => {
         <div className="chair-container">
             {chairs.map((chair, index) => (
                 <div key={index} className="chair-item">
-                    <img src={chair.imgSrc} alt={chair.name} className="chair-image" />
+                    <img src={chair.imgSrc} alt={chair.name} class="chair-image" />
                     <div className="chair-details">
                         <h3>{chair.name}</h3>
                         <p>{chair.price}</p>

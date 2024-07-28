@@ -24,7 +24,7 @@ const SideTable = () => {
         <div className="sideTable-container">
             {sideTables.map((sideTable, index) => (
                 <div key={index} className="sideTable-item">
-                    <img src={sideTable.imgSrc} alt={sideTable.name} className="sideTable-image" />
+                    <img src={sideTable.imgSrc} alt={sideTable.name} class="sideTable-image" />
                     <div className="sideTable-details">
                         <h3>{sideTable.name}</h3>
                         <p>{sideTable.price}</p>

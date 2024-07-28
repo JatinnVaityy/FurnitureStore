@@ -24,7 +24,7 @@ const Shoerack = () => {
         <div className="shoerack-container">
             {shoeRacks.map((shoerack, index) => (
                 <div key={index} className="shoerack-item">
-                    <img src={shoerack.imgSrc} alt={shoerack.name} className="shoerack-image" />
+                    <img src={shoerack.imgSrc} alt={shoerack.name} class="shoerack-image" />
                     <div className="shoerack-details">
                         <h3>{shoerack.name}</h3>
                         <p>{shoerack.price}</p>

@@ -24,7 +24,7 @@ const CoffeeTable = () => {
         <div className="coffeeTable-container">
             {coffeeTables.map((coffeeTable, index) => (
                 <div key={index} className="coffeeTable-item">
-                    <img src={coffeeTable.imgSrc} alt={coffeeTable.name} className="coffeeTable-image" />
+                    <img src={coffeeTable.imgSrc} alt={coffeeTable.name} class="coffeeTable-image" />
                     <div className="coffeeTable-details">
                         <h3>{coffeeTable.name}</h3>
                         <p>{coffeeTable.price}</p>

@@ -24,7 +24,7 @@ const Sofa = () => {
         <div className="sofa-container">
             {sofas.map((sofa, index) => (
                 <div key={index} className="sofa-item">
-                    <img src={sofa.imgSrc} alt={sofa.name} className="sofa-image" />
+                    <img src={sofa.imgSrc} alt={sofa.name} class="sofa-image" />
                     <div className="sofa-details">
                         <h3>{sofa.name}</h3>
                         <p>{sofa.price}</p>

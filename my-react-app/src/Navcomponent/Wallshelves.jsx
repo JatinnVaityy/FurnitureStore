@@ -24,7 +24,7 @@ const Wallshelves = () => {
         <div className="wallshelves-container">
             {wallShelves.map((wallshelf, index) => (
                 <div key={index} className="wallshelves-item">
-                    <img src={wallshelf.imgSrc} alt={wallshelf.name} className="wallshelves-image" />
+                    <img src={wallshelf.imgSrc} alt={wallshelf.name} class="wallshelves-image" />
                     <div className="wallshelves-details">
                         <h3>{wallshelf.name}</h3>
                         <p>{wallshelf.price}</p>
